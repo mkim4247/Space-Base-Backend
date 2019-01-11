@@ -10,7 +10,9 @@ class Api::V1::FloorsController < ApplicationController
   def create
     @floor = Floor.create(floor_params)
     if @floor.valid?
-      render json: { floor: FloorSerializer.new(@floor)}, status: :accepted
+      Shop.create(floor_id: @floor.id)
+      Shop.create(floor_id: @floor.id)
+      render json: FloorSerializer.new(@floor), status: :accepted
     else
       render json: { errors: @floor.errors.full_messages }
     end

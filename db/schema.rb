@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_01_08_193726) do
 
   create_table "shops", force: :cascade do |t|
     t.string "name"
-    t.string "shop_type"
+    t.string "shop_type", default: "Empty"
     t.integer "floor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

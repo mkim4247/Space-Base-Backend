@@ -40,8 +40,8 @@ class Api::V1::ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
   end
 
-  def tower_params
-    params.require(:shop).permit(:name, :type, :floor_id)
+  def shop_params
+    params.require(:shop).permit(:name, :shop_type, :floor_id)
   end
 
 
