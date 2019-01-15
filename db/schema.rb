@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 2019_01_08_193726) do
 
   create_table "towers", force: :cascade do |t|
     t.string "name"
-    t.integer "happiness"
-    t.integer "funds"
-    t.integer "population"
+    t.integer "happiness", default: 50
+    t.integer "funds", default: 10000
+    t.integer "population", default: 1
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
