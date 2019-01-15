@@ -9,6 +9,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.valid?
+      Tower.create(user_id: @user.id)
       render json: {
         user: UserSerializer.new(@user),
         message: "created",
