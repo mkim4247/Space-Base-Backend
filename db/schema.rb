@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2019_01_08_193726) do
   end
 
   create_table "shops", force: :cascade do |t|
-    t.string "name"
     t.string "shop_type", default: "Empty"
     t.integer "floor_id"
     t.datetime "created_at", null: false
@@ -33,8 +32,9 @@ ActiveRecord::Schema.define(version: 2019_01_08_193726) do
   create_table "towers", force: :cascade do |t|
     t.string "name"
     t.integer "happiness", default: 50
-    t.integer "funds", default: 10000
+    t.integer "funds", default: 1000
     t.integer "population", default: 1
+    t.integer "defense", default: 25
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,5 +1,5 @@
 class TowerSerializer < ActiveModel::Serializer
-  attributes :id, :name, :happiness, :funds, :population, :floors
+  attributes :id, :happiness, :funds, :population, :floors, :defense
   belongs_to :user
 
   def floors
