@@ -41,7 +41,7 @@ class Api::V1::ShopsController < ApplicationController
   end
 
   def shop_params
-    params.require(:shop).permit(:name, :shop_type, :floor_id)
+    params.require(:shop).permit(:shop_type, :floor_id)
   end
 
 

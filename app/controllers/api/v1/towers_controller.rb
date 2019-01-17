@@ -40,7 +40,7 @@ class Api::V1::TowersController < ApplicationController
   end
 
   def tower_params
-    params.require(:tower).permit(:name, :happiness, :funds, :population, :user_id)
+    params.require(:tower).permit(:happiness, :resources, :population, :defense, :user_id)
   end
 
 
