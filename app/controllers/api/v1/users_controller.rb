@@ -27,6 +27,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
+    puts @user.password_digest
     @user.update(user_params)
     if @user.save
       render json: @user, status: :accepted

@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_01_08_193726) do
   create_table "towers", force: :cascade do |t|
     t.string "name"
     t.integer "happiness", default: 50
-    t.integer "resources", default: 1000
+    t.integer "resources", default: 550
     t.integer "population", default: 1
     t.integer "defense", default: 25
     t.integer "user_id"
